@@ -118,17 +118,23 @@ const SocialLink = styled.a`
   margin: 0;
   opacity: 0.4;
   padding: 10px 12px;
+  text-decoration: none;
+  &:hover {
+    cursor: pointer;
+  }
 `;
 const Layout = ({ pageTitle, children }) => {
   const data = useStaticQuery(graphql`
     query {
       site {
         siteMetadata {
-          title
+          title,
+          insLink
         }
       }
     }
   `);
+  console.log('data', data)
   return (
     <SiteWrapper>
       <ResetStyle />
@@ -138,7 +144,7 @@ const Layout = ({ pageTitle, children }) => {
         <Nav />
         <Logo>{data?.site?.siteMetadata?.title}</Logo>
         <SocialNav>
-          <SocialLink href={data?.site?.siteMetadata?.insLink}>
+          <SocialLink href={data?.site?.siteMetadata?.insLink} target="_blank" title="instagram">
             Instagram
           </SocialLink>
         </SocialNav>
