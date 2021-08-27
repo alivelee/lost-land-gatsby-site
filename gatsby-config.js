@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl: "https://lostlandream.com/",
     title: "Lost Land Dream",
+    insLink: "https://www.instagram.com/xu_lei_wonder/"
   },
   plugins: [
     "gatsby-plugin-styled-components",
